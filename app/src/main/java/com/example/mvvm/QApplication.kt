@@ -36,6 +36,12 @@ class QApplication {
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(CommonConstants.DEFAULT_NON_NULL_GSON))
             .build()
+
+        val CATELOGREADER_RETROFIT2 = Retrofit.Builder()
+            .baseUrl("https://catalog-reader.qcoom.com/api/v1/")
+            .client(okHttpClient)
+            .addConverterFactory(GsonConverterFactory.create(CommonConstants.DEFAULT_NON_NULL_GSON))
+            .build()
     }
 
 }

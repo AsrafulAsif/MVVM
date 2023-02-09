@@ -37,7 +37,7 @@ class LandingFragment : Fragment(R.layout.fragment_landing) {
 
         lifecycleScope.launch {
             viewModel.observeMovieLiveData().observe(viewLifecycleOwner) {
-                movieAdapter.setList(it?.categories?.take(5))
+                movieAdapter.setList(it?.categories?.take(40))
                 movieAdapter.notifyDataSetChanged()
             }
         }

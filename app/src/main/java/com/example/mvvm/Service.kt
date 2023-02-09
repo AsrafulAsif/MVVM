@@ -12,4 +12,13 @@ interface Service {
         @Query("isParent") boolean: Boolean = true,
     ): Call<Data>
 
+    @GET("shop/nearest")
+    fun getRestaurantAroundMe(
+        @Query("type") type: String,
+        @Query("latitude") latitude: String,
+        @Query("longitude") longitude: String,
+        @Query("page") page: Int,
+        @Query("limit") limit: Int
+    ): Call<ShopResponse>
+
 }
